@@ -64,14 +64,24 @@ Sistem Kasir Minimarket berbasis **PHP Native**, **MySQL**, dan **Bootstrap 5** 
 * Total Member
 * Total Penjualan
 * Grafik Penjualan
-* Produk Best Seller
+* Ringkasan Performa Toko
+
+### 🏆 Best Seller Ranking
+
+* Top 5 Produk Terlaris
+* Ranking Berdasarkan Jumlah Penjualan
+* Total Produk Terjual
+* Monitoring Produk Favorit Pelanggan
+* Tabel Best Seller Real-Time
+* Analisis Produk Terpopuler
 
 ### 📈 Laporan
 
 * Laporan Harian
 * Laporan Bulanan
 * Laporan Tahunan
-* Export Data
+* Export Data Penjualan
+* Rekap Transaksi
 
 ### 💸 Payment Gateway
 
@@ -143,17 +153,17 @@ transaksi
 
 # 📸 Preview
 
-## Dashboard
+## Dashboard Admin
 
 <img width="100%" src="image/dashboard-admin.png">
 
-## Transaksi
+## kasir
 
-<img width="100%" src="image/transaksi.png">
+<img width="100%" src="image/kasir.png">
 
-## Data Barang
+## Halaman Pembeli
 
-<img width="100%" src="image/barang.png">
+<img width="100%" src="image/halaman-pembeli.png">
 
 ## Laporan
 
