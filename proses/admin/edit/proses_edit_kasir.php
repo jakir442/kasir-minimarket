@@ -13,7 +13,8 @@ $password    = $_POST['password'];
 $cek_kasir = mysqli_query(
     $koneksi,
     "SELECT id_pengguna FROM pengguna 
-    WHERE LOWER(username) = LOWER('$username')"
+    WHERE LOWER(username) = LOWER('$username')
+    AND id_barang != '$id_barang'"
 );
 
 if (mysqli_num_rows($cek_kasir) > 0) {

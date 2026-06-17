@@ -10,7 +10,8 @@ $nama_satuan = $_POST['nama_satuan'];
 $cek_satuan = mysqli_query(
     $koneksi,
     "SELECT id_satuan FROM satuan 
-    WHERE LOWER(nama_satuan) = LOWER('$nama_satuan')"
+    WHERE LOWER(nama_satuan) = LOWER('$nama_satuan')
+    AND id_barang != '$id_barang'"
 );
 
 if (mysqli_num_rows($cek_satuan) > 0) {

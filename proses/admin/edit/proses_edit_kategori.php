@@ -10,7 +10,8 @@ $nama_kategori = $_POST['nama_kategori'];
 $cek_kategori = mysqli_query(
     $koneksi,
     "SELECT id_kategori FROM kategori 
-    WHERE LOWER(nama_kategori) = LOWER('$nama_kategori')"
+    WHERE LOWER(nama_kategori) = LOWER('$nama_kategori')
+    AND id_barang != '$id_barang'"
 );
 
 if (mysqli_num_rows($cek_kategori) > 0) {
