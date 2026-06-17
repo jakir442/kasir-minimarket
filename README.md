@@ -262,10 +262,10 @@ http://localhost/kasir-minimarket
 
 # 👨‍💻 Developer - Kelompok 1
 
-**Jakir Apriyan - 2406004**
-**Moch. Asad Badriana - 2406126**
-**Rise Kartika Utami - 2406009**
-**Maulana Muhammad Zaki - 24060??**
+* Jakir Apriyan - 2406004
+* Moch. Asad Badriana - 2406126
+* Rise Kartika Utami - 2406008
+* Maulana Muhammad Zaki - 2406028
 
 Teknik Informatika
 Institut Teknologi Garut
