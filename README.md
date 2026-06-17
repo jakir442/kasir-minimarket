@@ -264,7 +264,7 @@ http://localhost/kasir-minimarket
 
 * Jakir Apriyan - 2406004
 * Moch. Asad Badriana - 2406126
-* Rise Kartika Utami - 2406009
+* Rise Kartika Utami - 2406008
 * Maulana Muhammad Zaki - 2406028
 
 Teknik Informatika
