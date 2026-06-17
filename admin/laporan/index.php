@@ -429,7 +429,7 @@ $qPendapatan = mysqli_query(
                         </table>
                         <?php foreach ($data_laporan as $laporan) : ?>
                         <?php
-                            $kode = $laporan['kode_transaksi'];
+                            $id_transaksi = $laporan['id_transaksi'];
 
                             $detail = mysqli_query(
                                 $koneksi,
@@ -437,7 +437,7 @@ $qPendapatan = mysqli_query(
                                 FROM detail_transaksi
                                 JOIN barang
                                     ON detail_transaksi.id_barang = barang.id_barang
-                                WHERE detail_transaksi.kode_transaksi='$kode'"
+                                WHERE detail_transaksi.id_transaksi='$id_transaksi'"
                             );
                         ?>
                         <div class="modal fade" id="detail<?= $laporan['kode_transaksi']; ?>" tabindex="-1"
