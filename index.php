@@ -58,7 +58,7 @@ $query = mysqli_query(
         LIMIT $offset, $limit"
 );
 
-// Session Keranjang
+// Session keranjang
 if (!isset($_SESSION['keranjang'])) {
     $_SESSION['keranjang'] = [];
 }
