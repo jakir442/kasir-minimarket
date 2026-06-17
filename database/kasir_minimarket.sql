@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 16, 2026 at 12:40 PM
+-- Generation Time: Jun 17, 2026 at 05:41 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -710,7 +710,38 @@ INSERT INTO `detail_transaksi` (`id_detail`, `id_transaksi`, `id_barang`, `qty`,
 (72, 93, 103, 1, 12000, 12000, '2884'),
 (73, 93, 63, 1, 2000, 2000, '2884'),
 (74, 93, 70, 1, 20000, 20000, '2884'),
-(75, 93, 149, 1, 23000, 23000, '2884');
+(75, 93, 149, 1, 23000, 23000, '2884'),
+(78, 95, 537, 1, 40000, 40000, '6192'),
+(79, 95, 583, 1, 8000, 8000, '6192'),
+(80, 96, 183, 1, 16000, 16000, '6110'),
+(81, 96, 537, 1, 40000, 40000, '6110'),
+(82, 97, 193, 1, 16000, 16000, '5318'),
+(83, 97, 194, 1, 16000, 16000, '5318'),
+(84, 97, 195, 1, 16000, 16000, '5318'),
+(85, 97, 205, 1, 6000, 6000, '5318'),
+(86, 97, 537, 1, 40000, 40000, '5318'),
+(87, 97, 583, 1, 8000, 8000, '5318'),
+(88, 97, 183, 1, 16000, 16000, '5318'),
+(89, 97, 230, 1, 8000, 8000, '5318'),
+(90, 97, 440, 1, 85000, 85000, '5318'),
+(91, 97, 535, 1, 65000, 65000, '5318'),
+(92, 97, 367, 1, 60000, 60000, '5318'),
+(93, 97, 610, 1, 3500, 3500, '5318'),
+(94, 97, 438, 1, 50000, 50000, '5318'),
+(95, 97, 72, 1, 20000, 20000, '5318'),
+(96, 97, 403, 1, 7500, 7500, '5318'),
+(97, 97, 372, 1, 6000, 6000, '5318'),
+(98, 97, 83, 1, 104000, 104000, '5318'),
+(99, 97, 212, 1, 3500, 3500, '5318'),
+(100, 97, 322, 1, 5000, 5000, '5318'),
+(101, 97, 389, 1, 15000, 15000, '5318'),
+(102, 97, 22, 1, 1000, 1000, '5318'),
+(103, 97, 191, 1, 2000, 2000, '5318'),
+(104, 97, 226, 1, 10000, 10000, '5318'),
+(105, 97, 172, 1, 30000, 30000, '5318'),
+(106, 97, 452, 1, 15000, 15000, '5318'),
+(107, 97, 142, 1, 65000, 65000, '5318'),
+(108, 97, 146, 1, 3000, 3000, '5318');
 
 -- --------------------------------------------------------
 
@@ -880,7 +911,10 @@ INSERT INTO `transaksi` (`id_transaksi`, `kode_transaksi`, `total_harga`, `disko
 (84, '2803', 85000, '0.00', 85000, 0, '2026-06-13 10:27:39', 'dibayar', 'online', '94beb6c1-9fe7-40b1-b547-b5d3ae0a00e3', 5, NULL),
 (85, '6045', 110000, '0.00', 110000, 0, '2026-06-13 10:28:45', 'dibayar', 'online', '2e35ce12-0388-46d8-ac45-2f9250387ae3', 8, NULL),
 (92, '8275', 269800, '14200.00', 269800, 0, '2026-06-15 12:26:50', 'dibayar', 'online', '31f85dc7-d0e5-4d21-ab28-99a0e194e53c', 7, 2),
-(93, '2884', 190950, '10050.00', 190950, 0, '2026-06-15 14:50:36', 'dibayar', 'online', 'ddfa863b-a1b3-4346-a863-188c133b3c34', 7, 2);
+(93, '2884', 190950, '10050.00', 190950, 0, '2026-06-15 14:50:36', 'dibayar', 'online', 'ddfa863b-a1b3-4346-a863-188c133b3c34', 7, 2),
+(95, '6192', 48000, '0.00', 0, 0, '2026-06-16 15:23:42', 'pending', NULL, NULL, NULL, NULL),
+(96, '6110', 56000, '0.00', 0, 0, '2026-06-17 01:31:58', 'pending', NULL, NULL, NULL, NULL),
+(97, '5318', 676500, '0.00', 0, 0, '2026-06-17 01:34:02', 'pending', NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -891,7 +925,8 @@ INSERT INTO `transaksi` (`id_transaksi`, `kode_transaksi`, `total_harga`, `disko
 --
 ALTER TABLE `barang`
   ADD PRIMARY KEY (`id_barang`),
-  ADD KEY `id_kategori` (`id_kategori`);
+  ADD KEY `id_kategori` (`id_kategori`),
+  ADD KEY `id_satuan` (`id_satuan`);
 
 --
 -- Indexes for table `detail_transaksi`
@@ -951,7 +986,7 @@ ALTER TABLE `barang`
 -- AUTO_INCREMENT for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  MODIFY `id_detail` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id_detail` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -981,7 +1016,7 @@ ALTER TABLE `satuan`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- Constraints for dumped tables
@@ -991,7 +1026,8 @@ ALTER TABLE `transaksi`
 -- Constraints for table `barang`
 --
 ALTER TABLE `barang`
-  ADD CONSTRAINT `barang_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `barang_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_barang_satuan` FOREIGN KEY (`id_satuan`) REFERENCES `satuan` (`id_satuan`);
 
 --
 -- Constraints for table `detail_transaksi`
@@ -1004,6 +1040,7 @@ ALTER TABLE `detail_transaksi`
 -- Constraints for table `transaksi`
 --
 ALTER TABLE `transaksi`
+  ADD CONSTRAINT `fk_transaksi_member` FOREIGN KEY (`id_member`) REFERENCES `member` (`id_member`),
   ADD CONSTRAINT `fk_transaksi_pengguna` FOREIGN KEY (`id_pengguna`) REFERENCES `pengguna` (`id_pengguna`) ON UPDATE CASCADE;
 COMMIT;
 
