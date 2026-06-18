@@ -11,8 +11,8 @@ if (!isset($_SESSION['admin'])) {
 // Ambil Data Form
 $nama_barang = trim($_POST['nama_barang']);
 $id_kategori = htmlspecialchars($_POST['id_kategori']);
-$harga       = htmlspecialchars($_POST['harga']);
-$stok        = htmlspecialchars($_POST['stok']);
+$harga       = (int) $_POST['harga'];
+$stok        = (int) $_POST['stok'];
 $satuan      = htmlspecialchars($_POST['id_satuan']);
 
 // Validasi
@@ -26,6 +26,17 @@ if (
     echo "
         <script>
             alert('Semua field wajib diisi!');
+            window.location='../../../admin/barang/tambah.php';
+        </script>
+    ";
+    exit;
+}
+
+// Validasi harga dan stok tidak boleh negatif
+if ($harga < 0 || $stok < 0) {
+    echo "
+        <script>
+            alert('Harga dan stok tidak boleh bernilai negatif!');
             window.location='../../../admin/barang/tambah.php';
         </script>
     ";
