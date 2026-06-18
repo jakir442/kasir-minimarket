@@ -14,7 +14,7 @@ $cek_kasir = mysqli_query(
     $koneksi,
     "SELECT id_pengguna FROM pengguna 
     WHERE LOWER(username) = LOWER('$username')
-    AND id_barang != '$id_barang'"
+    AND id_pengguna != '$id_pengguna'"
 );
 
 if (mysqli_num_rows($cek_kasir) > 0) {

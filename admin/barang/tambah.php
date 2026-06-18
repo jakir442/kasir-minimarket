@@ -120,7 +120,8 @@ $satuan = mysqli_query(
                                 <label class="form-label fw-semibold">Harga</label>
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-text">Rp</span>
-                                    <input type="number" name="harga" class="form-control" placeholder="0" required>
+                                    <input type="number" name="harga" min="0" class="form-control" placeholder="0"
+                                        required>
                                 </div>
                             </div>
 
@@ -128,7 +129,7 @@ $satuan = mysqli_query(
                             <div class="mb-4">
                                 <label class="form-label fw-semibold">Stok</label>
                                 <input type="number" name="stok" class="form-control form-control-lg rounded-3"
-                                    placeholder="Jumlah stok" required>
+                                    placeholder="Jumlah stok" min="0" step="1" required>
                             </div>
 
                             <!-- Button -->

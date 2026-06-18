@@ -4,11 +4,39 @@ session_start();
 include '../../../config/db.php';
 
 $id_barang   = $_POST['id_barang'];
-$nama_barang = $_POST['nama_barang'];
+$nama_barang = trim($_POST['nama_barang']);
 $id_kategori = $_POST['id_kategori'];
-$harga       = $_POST['harga'];
-$stok        = $_POST['stok'];
+$harga       = (int) $_POST['harga'];
+$stok        = (int) $_POST['stok'];
 $satuan      = $_POST['id_satuan'];
+
+// Validasi field wajib
+if (
+    empty($nama_barang) ||
+    empty($id_kategori) ||
+    !isset($_POST['harga']) ||
+    !isset($_POST['stok']) ||
+    empty($satuan)
+) {
+    echo "
+        <script>
+            alert('Semua field wajib diisi!');
+            window.location='../../../admin/barang/edit.php?id=$id_barang';
+        </script>
+    ";
+    exit;
+}
+
+// Validasi harga dan stok
+if ($harga < 0 || $stok < 0) {
+    echo "
+        <script>
+            alert('Harga dan stok tidak boleh bernilai negatif!');
+            window.location='../../../admin/barang/edit.php?id=$id_barang';
+        </script>
+    ";
+    exit;
+}
 
 // Cek duplikat nama barang
 $cek_barang = mysqli_query(

@@ -127,7 +127,7 @@ $satuan = mysqli_query(
                                 <label class="form-label fw-semibold">Harga</label>
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-text">Rp</span>
-                                    <input type="number" name="harga" class="form-control" required
+                                    <input type="number" name="harga" min="0" class="form-control" required
                                         value="<?= $barang['harga']; ?>">
                                 </div>
                             </div>
@@ -135,7 +135,8 @@ $satuan = mysqli_query(
                             <!-- Stok -->
                             <div class="mb-4">
                                 <label class="form-label fw-semibold">Stok</label>
-                                <input type="number" name="stok" class="form-control form-control-lg rounded-3" required
+                                <input type="number" name="stok" min="0" step="1"
+                                    class="form-control form-control-lg rounded-3" required
                                     value="<?= $barang['stok']; ?>">
                             </div>
 
